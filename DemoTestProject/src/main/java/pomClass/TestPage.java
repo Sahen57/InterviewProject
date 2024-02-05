@@ -53,12 +53,11 @@ public class TestPage {
 	public WebElement getpublicDate() {
 		return publicDate;
 	}
-	
-	@FindBy(xpath="//div[@class='card noResult flex center-v']//span")
+
+	@FindBy(xpath = "//div[@class='card noResult flex center-v']//span")
 	private WebElement notfound;
-	
-	public WebElement getnotfound()
-	{
+
+	public WebElement getnotfound() {
 		return notfound;
 	}
 
