@@ -5,8 +5,8 @@
     <classes>
       <class name="testCases.DemoTestCase">
         <methods>
+          <include name="positive_Tc_01"/>
           <include name="launchBrowser"/>
-          <include name="negative_Tc_01"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- testCases.DemoTestCase -->

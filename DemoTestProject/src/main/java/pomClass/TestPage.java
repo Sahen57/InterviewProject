@@ -33,13 +33,6 @@ public class TestPage {
 		return medicName;
 	}
 
-	@FindBy(xpath = "(//li[@class='result card container showButtonsOnHover'])[6]")
-	private WebElement detailsText;
-
-	public WebElement getdetailsText() {
-		return detailsText;
-	}
-
 	@FindBy(xpath = "//table[@class='patentDetails noBorder']//td[contains(text(),'Switzerland')]/../../..//a")
 	private WebElement countrySelect;
 
@@ -59,6 +52,14 @@ public class TestPage {
 
 	public WebElement getpublicDate() {
 		return publicDate;
+	}
+	
+	@FindBy(xpath="//div[@class='card noResult flex center-v']//span")
+	private WebElement notfound;
+	
+	public WebElement getnotfound()
+	{
+		return notfound;
 	}
 
 }
