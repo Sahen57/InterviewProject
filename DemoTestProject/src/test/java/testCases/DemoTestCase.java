@@ -17,6 +17,7 @@ public class DemoTestCase extends BaseClass {
 	@Test(priority = 1)
 	public void positive_Tc_01() throws InterruptedException {
 		TestPage tp = new TestPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		tp.getsearchField().sendKeys("rilpivirine");
 		tp.getpopUp().click();
 		tp.getmedicName().click();
@@ -35,8 +36,7 @@ public class DemoTestCase extends BaseClass {
 		WebElement publicationDate = tp.getpublicDate();
 		Assert.assertEquals("19.05.2004", publicationDate.getText());
 
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait2.until(ExpectedConditions.numberOfWindowsToBe(2));
+		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 		driver.switchTo().window(firstWindow);
 	}
 
